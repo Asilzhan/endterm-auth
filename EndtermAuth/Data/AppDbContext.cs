@@ -7,6 +7,7 @@ public class AppDbContext : DbContext
 {
     public required DbSet<User> Users { get; set; }
     public required DbSet<UserLogin> UserLogins { get; set; }
+    public required DbSet<Post> Posts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite("Data Source=app.db");

@@ -77,6 +77,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapAuthEndpoints().WithOpenApi();
+app.MapPostsEndpoints().WithOpenApi();
 
 app.MapGet("/admin", () => "Admin content")
     .RequireAuthorization("admin")
